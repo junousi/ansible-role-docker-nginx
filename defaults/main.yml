@@ -18,6 +18,9 @@ nginx_exposed_volumes:
   - "{{ nginx_base_directory }}/defaults:/usr/share/nginx/html:ro"
   - "{{ nginx_reverse_proxy_config_directory }}:/etc/nginx/conf.d:ro"
 
+nginx_networks:
+  - name: bridge
+
 nginx_conf: |
   user root;
   worker_processes 1;
