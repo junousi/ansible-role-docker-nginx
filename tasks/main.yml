@@ -58,6 +58,7 @@
     name: "{{ nginx_container_name }}"
     volumes: '{{ nginx_exposed_volumes }}'
     ports: '{{ nginx_published_ports }}'
+    networks: "{{ nginx_networks }}"
     exposed_ports: '{{ nginx_exposed_ports }}'
     state: 'started'
     restart_policy: 'always'
